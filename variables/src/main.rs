@@ -3,7 +3,7 @@
 fn main() {
     // ----- Variables and Mutability ----- //
     let x: i32 = 5;
-
+    
     let x: i32 = x + 1;
 
     {
