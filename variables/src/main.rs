@@ -98,6 +98,9 @@ fn main() {
     for number in (1..5).rev() {
         print!("{number}!");
     }
+
+    println!("\ngit test");
+
 }
 
 
