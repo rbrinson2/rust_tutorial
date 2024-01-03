@@ -9,9 +9,18 @@ struct User {
 struct Color (i32, i32, i32);
 struct Point (i32, i32, i32);
 
-struct AlwaysEqual;
+// struct AlwaysEqual;
+
+// ----- Exapmle Program Structs ----- //
+
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32
+} 
 
 fn main() {
+    // ----- Defining Structs ----- //
     let mut user1 = User {
         active: true,
         username: String::from("someuser123"),
@@ -35,7 +44,18 @@ fn main() {
 
     println!("black: {}, origin {}", black.0, origin.0);
 
-    let subject = AlwaysEqual;
+    //let subject = AlwaysEqual;
+
+    // ----- An Example Program ----- //
+
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50
+    };
+
+    println!("The area of the {:?} is {}.", rect1, area(&rect1));
+
+    dbg!(&rect1);
 
 }
 
@@ -46,4 +66,10 @@ fn build_user (email: String, username: String) -> User {
         email,
         sign_in_count: 1
     }
+}
+
+// ----- An Exapmle Program Functions ----- //
+
+fn area(rectangle: &Rectangle) -> u32 {
+    rectangle.width * rectangle.height
 }
